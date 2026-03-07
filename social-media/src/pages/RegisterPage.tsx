@@ -1,5 +1,12 @@
+import {RegisteryForm} from "../components/RegisteryForm.tsx";
+
+
 export function RegisterPage(){
+
+
     return(
-        <div>Register</div>
+        <div className="mx-auto max-w-md">
+            <RegisteryForm />
+        </div>
     )
 }
