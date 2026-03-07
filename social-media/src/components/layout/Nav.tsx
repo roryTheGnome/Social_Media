@@ -1,10 +1,13 @@
 import {useState} from "react";
 import {Link} from "@tanstack/react-router";
+import {useAuth} from "../../features/useAuth.ts";
 
 
 export function Nav(){
 
     const [open,setOpen]=useState(false);
+
+    const {user,logout}=useAuth();
 
     return(
         <nav className="w-full border-b border-blue-950 bg-white">
@@ -15,9 +18,18 @@ export function Nav(){
                 </Link>
 
                 <div className="hidden md:flex gap-6">
-                    <Link to="/login" className="text-blue-500 hover:underline">Login</Link>
-                    <Link to="/register" className="text-blue-500 hover:underline">Register</Link>
                     <Link to="/feed" className="text-blue-500 hover:underline">Feed</Link>
+                    {user?(
+                        <>
+                            <button className="text-red-500 hover:underline" onClick={logout}>Logout</button>
+                        </>
+                    ):(
+                        <>
+                            <Link to="/login" className="text-blue-500 hover:underline">Login</Link>
+                            <Link to="/register" className="text-blue-500 hover:underline">Register</Link>
+                        </>
+                    )}
+
                 </div>
 
                 <button className="md:hidden" onClick={()=>setOpen(!open)}>☰</button>
@@ -26,9 +38,16 @@ export function Nav(){
 
             {open &&(
                 <div className="flex flex-col gap-3 border-blue-950 border-t md:hidden">
-                    <Link to="/login" className="text-blue-500 ">Login</Link>
-                    <Link to="/register" className="text-blue-500 ">Register</Link>
                     <Link to="/feed" className="text-blue-500 ">Feed</Link>
+                    {user? (
+                        <button className="text-red-500" onClick={logout}>Logout</button>
+                    ):(
+                        <>
+                            <Link to="/login" className="text-blue-500 ">Login</Link>
+                            <Link to="/register" className="text-blue-500 ">Register</Link>
+                        </>
+                    )}
+
                 </div>
             )}
 
