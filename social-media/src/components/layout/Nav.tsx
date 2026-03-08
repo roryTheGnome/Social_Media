@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Link} from "@tanstack/react-router";
-import {useAuth} from "../../features/useAuth.ts";
+import {useAuth} from "../../features/auth/useAuth.ts";
 
 
 export function Nav(){

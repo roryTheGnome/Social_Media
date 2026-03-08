@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {useAuth} from "../features/useAuth.ts";
+import {useAuth} from "../features/auth/useAuth.ts";
 import {useNavigate} from "@tanstack/react-router";
 
 
