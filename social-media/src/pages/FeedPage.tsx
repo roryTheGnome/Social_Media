@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { usePosts } from '../features/posts/usePosts'
+import { usePosts } from '../features/usePosts.ts'
 import { CreatePost } from '../components/posts/CreatePost.tsx'
 import { Feed } from '../components/posts/Feed.tsx'
 import type { Post } from '../types/Post.ts'
