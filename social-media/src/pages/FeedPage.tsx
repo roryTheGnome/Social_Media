@@ -19,13 +19,15 @@ export function FeedPage() {
   if (error) return <div>!Failed to load posts!</div>
 
   return (
-    <div className="mx-auto max-w-2xl space-y-6">
+    <div className="mx-auto max-w-2xl px-4 py-8">
       <ScrollTop />
-      <h1 className="text-2xl font-bold">Feed</h1>
+      <h1 className="mb-6 text-3xl font-bold">Feed</h1>
 
       <CreatePost onCreate={addPosts} />
 
-      <Feed posts={posts} />
+      <div className="mt-6 space-y-6">
+        <Feed posts={posts} />
+      </div>
     </div>
   )
 }

@@ -1,24 +1,25 @@
-import {RegisteryForm} from "../components/RegisteryForm.tsx";
+import { RegisteryForm } from '../components/RegisteryForm.tsx'
 
-export function WelcomePage(){
-    return(
-        <div className="grid gap-7 md:grid-cols-2">
+export function WelcomePage() {
+  return (
+    <div className="min-h-screen  flex items-center justify-center px-6">
+      <div className="grid max-w-5xl gap-10 md:grid-cols-2">
+        <main>
+          <h1 className="mb-6 text-5xl font-extrabold text-gray-800">
+            Join Social Media Today
+          </h1>
 
-            <main>
-                <h1 className="mt-5 mb-4 text-4xl font-bold">
-                    Join Social Media Today
-                </h1>
+          <p className="text-lg text-gray-600">
+            Scroll endlessly, share your hottest takes, and discover posts from
+            strangers you’ll never meet, all while pretending you’re just
+            checking one thing.
+          </p>
+        </main>
 
-                <p className="text-gray-600">
-                    Scroll endlessly, share your hottest takes, and discover posts from strangers you’ll never
-                    meet, all while pretending you’re just checking one thing.
-                </p>
-            </main>
-
-            <aside className="rounded-lg border-blue-950 p-6 shadow-sm">
-                <RegisteryForm/>
-            </aside>
-
-        </div>
-    )
+        <aside className="rounded-2xl bg-white p-8 border border-gray-900 shadow-lg">
+          <RegisteryForm />
+        </aside>
+      </div>
+    </div>
+  )
 }

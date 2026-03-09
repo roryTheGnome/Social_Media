@@ -37,21 +37,29 @@ export function PostCard({ post }: Props) {
   }
 
   return (
-    <div className="rounded-xl border bg-white p-5 shadow-sm">
-      <h2 className="text-lg font-semibold">{post.title}</h2>
-      <p className="mt-2 text-gray-900 bg-amber-100 rounded-xl p-2">
-        {post.body}
-      </p>
+    <div className="rounded-xl border border-gray-900 bg-white p-5 shadow-sm transition hover:shadow-md">
+      <div className="flex items-center gap-3">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+          {post.title[0].toUpperCase()}
+        </div>
+
+        <div>
+          <h2 className="font-semibold">{post.title}</h2>
+        </div>
+      </div>
+
+      <p className="mt-4 text-gray-600">{post.body}</p>
+
       {user ? (
         <div className="mt-3 flex flex-row p-2 align-middle">
           <button
-            className="mt-3 flex flex-row p-2 align-middle"
+            className="mt-4 flex gap-6 text-sm text-gray-500"
             onClick={handleLike}
           >
             ❤️{like}
           </button>
           <button
-            className="mt-3 flex flex-row p-2 align-middle"
+            className="mt-4 flex gap-6 text-sm text-gray-500"
             onClick={handleDislike}
           >
             💔{dislike}
@@ -59,8 +67,10 @@ export function PostCard({ post }: Props) {
         </div>
       ) : (
         <div className="mt-3 flex flex-row p-2 align-middle">
-          <div className="mx-3 text-sm text-gray-800">❤️{like}</div>
-          <div className="mx-3 text-sm text-gray-800">💔 {dislike}</div>
+          <div className="mt-4 flex gap-6 text-sm text-gray-500">❤️{like}</div>
+          <div className="mt-4 flex gap-6 text-sm text-gray-500">
+            💔 {dislike}
+          </div>
         </div>
       )}
     </div>

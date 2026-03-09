@@ -14,23 +14,29 @@ export function Nav() {
   }
 
   return (
-    <nav className="w-full border-b border-blue-950 bg-white">
+    <nav className="w-full border-b border-grey-900 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between p-3">
         <Link to="/">
-          <h1 className=" text-xl font-bold">Social Media</h1>
+          <h1 className="text-xl font-bold text-gray-800">Social Media</h1>
         </Link>
 
         <div className="hidden md:flex gap-6">
-          <Link to="/feed" className="text-blue-500 hover:underline">
+          <Link
+            to="/feed"
+            className="text-gray-600 hover:text-blue-500 transition"
+          >
             Feed
           </Link>
-          <Link to="/chat" className="text-blue-500 hover:underline">
+          <Link
+            to="/chat"
+            className="text-gray-600 hover:text-blue-500 transition"
+          >
             Chat
           </Link>
           {user ? (
             <>
               <button
-                className="text-red-500 hover:underline"
+                className="rounded-lg bg-red-500 px-4 py-1 text-white transition hover:bg-red-600"
                 onClick={handleLogut}
               >
                 Logout
@@ -38,39 +44,45 @@ export function Nav() {
             </>
           ) : (
             <>
-              <Link to="/login" className="text-blue-500 hover:underline">
+              <Link
+                to="/login"
+                className="text-gray-600 hover:text-blue-500 transition"
+              >
                 Login
               </Link>
-              <Link to="/register" className="text-blue-500 hover:underline">
+              <Link
+                to="/register"
+                className="text-gray-600 hover:text-blue-500 transition"
+              >
                 Register
               </Link>
             </>
           )}
         </div>
 
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
+        <button className="text-2xl md:hidden" onClick={() => setOpen(!open)}>
           ☰
         </button>
       </div>
 
       {open && (
-        <div className="flex flex-col gap-3 border-blue-950 border-t md:hidden">
-          <Link to="/feed" className="text-blue-500 ">
+        <div className="flex flex-col gap-3 border-gray-900 border-t md:hidden">
+          <Link to="/feed" className="text-gray-700 ">
             Feed
           </Link>
-          <Link to="/chat" className="text-blue-500 ">
+          <Link to="/chat" className="text-gray-700 ">
             Chat
           </Link>
           {user ? (
-            <button className="text-red-500" onClick={handleLogut}>
+            <button className="text-left text-red-500" onClick={handleLogut}>
               Logout
             </button>
           ) : (
             <>
-              <Link to="/login" className="text-blue-500 ">
+              <Link to="/login" className="text-gray-700">
                 Login
               </Link>
-              <Link to="/register" className="text-blue-500 ">
+              <Link to="/register" className="text-gray-700">
                 Register
               </Link>
             </>
