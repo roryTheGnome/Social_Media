@@ -1,5 +1,5 @@
-import type { Post } from '../types/post.ts'
-import { useAuth } from '../features/auth/useAuth.ts'
+import type { Post } from '../../types/Post.ts'
+import { useAuth } from '../../features/auth/useAuth.ts'
 import { useState } from 'react'
 
 type Props = {

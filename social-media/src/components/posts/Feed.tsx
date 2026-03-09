@@ -1,5 +1,5 @@
-import { PostCard } from './PostCard'
-import type { Post } from '../types/post.ts'
+import { PostCard } from './PostCard.tsx'
+import type { Post } from '../../types/Post.ts'
 
 type Props = {
   posts: Post[]

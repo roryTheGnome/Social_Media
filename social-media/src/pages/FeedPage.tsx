@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { usePosts } from '../features/posts/usePosts'
-import { CreatePost } from '../components/CreatePost'
-import { Feed } from '../components/Feed'
-import type { Post } from '../types/post'
+import { CreatePost } from '../components/posts/CreatePost.tsx'
+import { Feed } from '../components/posts/Feed.tsx'
+import type { Post } from '../types/Post.ts'
 import { ScrollTop } from '../components/ScrollTop.tsx'
 
 export function FeedPage() {

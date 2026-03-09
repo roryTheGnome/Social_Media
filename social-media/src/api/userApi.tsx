@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { User } from '../types/user.ts'
+import type { User } from '../types/User.ts'
 
 const APILink = 'https://dummyjson.com/users'
 //change the link HERE

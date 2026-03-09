@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { Post } from '../types/post.ts'
+import type { Post } from '../types/Post.ts'
 
 const APILink = 'https://dummyjson.com/posts'
 //change the link HERE

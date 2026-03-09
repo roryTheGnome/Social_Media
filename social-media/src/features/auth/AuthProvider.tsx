@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { User, AuthProviderProp } from '../../types/authTypes.ts'
+import type { User, AuthProviderProp } from '../../types/AuthTypes.ts'
 import { AuthContext } from './authContext.tsx'
 
 export function AuthProvider({ children }: AuthProviderProp) {
