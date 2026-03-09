@@ -24,6 +24,9 @@ export function Nav() {
           <Link to="/feed" className="text-blue-500 hover:underline">
             Feed
           </Link>
+          <Link to="/chat" className="text-blue-500 hover:underline">
+            Chat
+          </Link>
           {user ? (
             <>
               <button
@@ -43,9 +46,6 @@ export function Nav() {
               </Link>
             </>
           )}
-          <Link to="/chat" className="text-blue-500 hover:underline">
-            Chat
-          </Link>
         </div>
 
         <button className="md:hidden" onClick={() => setOpen(!open)}>
@@ -57,6 +57,9 @@ export function Nav() {
         <div className="flex flex-col gap-3 border-blue-950 border-t md:hidden">
           <Link to="/feed" className="text-blue-500 ">
             Feed
+          </Link>
+          <Link to="/chat" className="text-blue-500 ">
+            Chat
           </Link>
           {user ? (
             <button className="text-red-500" onClick={handleLogut}>
@@ -72,9 +75,6 @@ export function Nav() {
               </Link>
             </>
           )}
-          <Link to="/chat" className="text-blue-500 ">
-            Chat
-          </Link>
         </div>
       )}
     </nav>
