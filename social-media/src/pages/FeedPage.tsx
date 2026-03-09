@@ -3,6 +3,7 @@ import { usePosts } from '../features/posts/usePosts'
 import { CreatePost } from '../components/CreatePost'
 import { Feed } from '../components/Feed'
 import type { Post } from '../types/post'
+import { ScrollTop } from '../components/ScrollTop.tsx'
 
 export function FeedPage() {
   const { data: apiPosts, isLoading, error } = usePosts()
@@ -19,6 +20,7 @@ export function FeedPage() {
 
   return (
     <div className="mx-auto max-w-2xl space-y-6">
+      <ScrollTop />
       <h1 className="text-2xl font-bold">Feed</h1>
 
       <CreatePost onCreate={addPosts} />
