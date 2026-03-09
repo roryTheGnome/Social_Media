@@ -17,16 +17,19 @@ export function Chat() {
 
   if (!user) {
     return (
-      <div className="flex flex-col items-start">
-        <h2>Login to use chat</h2>
-        <>
-          <Link
-            to="/login"
-            className="text-white bg-blue-500 rounded p-2 mt-5 "
-          >
-            Login
-          </Link>
-        </>
+      <div className="rounded-xl bg-white p-8 text-center shadow">
+        <h2 className="text-xl font-semibold text-gray-800">
+          Login to use chat
+        </h2>
+
+        <p className="mt-2 text-gray-500">Messages await you… probably not.</p>
+
+        <Link
+          to="/login"
+          className="mt-5 inline-block rounded-lg bg-blue-500 px-5 py-2 text-white transition hover:bg-blue-600"
+        >
+          Go to Login
+        </Link>
       </div>
     )
   }
@@ -40,7 +43,7 @@ export function Chat() {
       <div className="mb-4 h-75 overflow-y-auto rounded border p-2">
         {messages.map((msg) => (
           <div key={msg.id} className="mb-2">
-            <span className="font-semibold">{msg.from}:</span>
+            <span className="font-semibold">{msg.from}: </span>
             {msg.text}
           </div>
         ))}

@@ -45,18 +45,18 @@ export function LoginPage() {
 
   return (
     <div className="mx-auto max-w-md">
-      <h1 className="mb-6 text-2xl font-bold">Login</h1>
+      <h2 className="mb-6 text-2xl font-bold text-gray-800">Login</h2>
 
       <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
         <input
-          className="rounded border p-2 shadow-sm"
+          className="w-full rounded-lg border p-3 bg-white transition focus:outline-none focus:ring-2 focus:ring-blue-400 border-gray-30"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
 
         <input
-          className="rounded border p-2 shadow-sm"
+          className="w-full rounded-lg border p-3 bg-white transition focus:outline-none focus:ring-2 focus:ring-blue-400 border-gray-30"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -65,7 +65,7 @@ export function LoginPage() {
 
         <button
           type="submit"
-          className="rounded border p-2 shadow-sm bg-blue-500 text-white hover:bg-blue-600"
+          className="mt-2 rounded-lg bg-blue-500 py-3 font-semibold text-white transition hover:bg-blue-600"
         >
           Login
         </button>

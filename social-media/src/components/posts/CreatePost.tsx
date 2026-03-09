@@ -31,9 +31,9 @@ export function CreatePost({ onCreate }: Props) {
   }
 
   return (
-    <div className="rounded-xl border p-4 shadow-sm">
+    <div className="rounded-xl border border-gray-900 bg-white p-4 shadow-sm">
       <textarea
-        className="w-full resize-none rounded border p-2"
+        className="w-full resize-none rounded-lg border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
         rows={1}
         placeholder="Add Title.."
         value={title}
@@ -41,19 +41,21 @@ export function CreatePost({ onCreate }: Props) {
       />
 
       <textarea
-        className="w-full resize-none rounded border p-2"
+        className="w-full resize-none rounded-lg border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
         rows={3}
         placeholder="Share what's on your mind..."
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
 
-      <button
-        className="mt-3 rounded p-2 bg-blue-500 text-white hover:bg-blue-600"
-        onClick={handleSubmit}
-      >
-        Post
-      </button>
+      <div className="mt-3 flex justify-end">
+        <button
+          className="rounded-lg bg-blue-500 px-5 py-2 text-white transition hover:bg-blue-600"
+          onClick={handleSubmit}
+        >
+          Post
+        </button>
+      </div>
     </div>
   )
 }
