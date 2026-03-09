@@ -1,12 +1,12 @@
-import { Layout } from '../components/layout/Layout'
+import { Layout } from '../components/layout/Layout.tsx'
 import {
   createRootRoute,
   createRoute,
   createRouter,
 } from '@tanstack/react-router'
-import { WelcomePage } from '../pages/WelcomePage'
-import { LoginPage } from '../pages/LoginPage'
-import { RegisterPage } from '../pages/RegisterPage'
+import { WelcomePage } from '../pages/WelcomePage.tsx'
+import { LoginPage } from '../pages/LoginPage.tsx'
+import { RegisterPage } from '../pages/RegisterPage.tsx'
 import { FeedPage } from '../pages/FeedPage.tsx'
 import { ChatPage } from '../pages/ChatPage.tsx'
 
